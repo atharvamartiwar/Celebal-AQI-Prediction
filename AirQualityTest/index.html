@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirQualityPridiction</title>
+  <!-- link of bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- link of bootstrap cloase  -->
+    <style>
+
+       
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        label {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            padding-left: 1%;
+        }
+        #outputbox{
+            background-color: gray;
+            color: white;
+            width: 99%;
+            height: 200px;
+        }
+        #imageAirQ img{
+            background-color: black;
+            opacity: 3;
+        }
+        #inputsection{
+            width: 31vw;
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            [class*="col-"] {
+              width: 100%;
+            }
+            #imageAirQ img{
+                width: 100%;
+                height: 300px;
+            }
+            #outputbox{
+                width: 95%;
+                height: 100px;
+                margin-bottom: 20px;
+                margin-left: 5px;
+            }
+            #inputsection{
+                width: 100vw;
+
+            }
+            #imgNav{
+                display: none;
+            }
+          }
+    </style>
+</head>
+
+<body>
+    <!-- navbarsection start  -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:  #39A6A3;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#"><img
+                    src="https://www2.acom.ucar.edu/sites/default/files/styles/extra_large/public/images/MAP-AQ-logo-02.png?itok=1Vk__l15"
+                    alt="image Not Gound" height="50px" width="60px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="">GiHub Repository</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://www.kaggle.com/datasets/atharvamartiwar/celebal-tech-aqi-prediction">Dataset Link</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand fw-bold" href="#" id="imgNav"><img
+                    src="Weather.png" height="60px" width="80px"></a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- navbarsection close -->
+
+        <div class="row">
+            <div class="col-sm-4" id="imageAirQ">
+                <img src="imageair.png" alt="Img not found" width="100%" height="735px">
+            </div>
+    
+    
+            <div class="col-sm-8">
+    
+                <form action="" method="post">
+                    <h1 style="background-color:rgb(24, 41, 41);color:tan;text-align:center;margin-top:10px;margin-bottom:15px;padding:4px">
+                        Check The Air  Quality Using Air Quality index Level  
+                    </h1>
+    
+                    <label>Enter Average Temperature (°C)
+                        <br>
+                        <input  type="number"  id="inputsection"></label>
+                    
+                    
+                        <label>Enter Max Temperature(°C)
+                            <br>
+                            <input  type="number" id="inputsection"></label>
+                    
+                            <br>
+
+                    <label>Enter Min Temperature(°C)
+                        <br>
+                        <input  type="number"  id="inputsection"></label></label>
+                  
+    
+                   
+                    <label>Enter Average Relative Humidity(%)
+                        <br>
+                        <input  type="number"  id="inputsection"></label>
+                    
+    
+                    <label>Enter Total Rainfall/Snowmelt (mm)
+                        <br>
+                        <input  type="number"  id="inputsection"></label>
+                    
+    
+    
+    
+                    <label>Enter Average Visibility (km)
+                        <br>
+                        <input  type="number" id="inputsection"></label>
+                    
+                    <label>Enter Average Wind Speed (km/h)
+                        <br>
+                        <input  type="number"  id="inputsection"></label>
+                    
+    
+    
+    
+                    <label>Enter Maximum Sustained Wind Speed (km/h)
+                        <br>
+                        <input type="number"  id="inputsection"></label>
+                  
+    
+                    
+    
+                    
+    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+    
+                    <div class=" text-center">
+                        <button type="submit" class="btn btn-primary" id="btnSucess">Pridict</button>
+                        <button type="reset" class="btn btn-primary" id="reset">Reset</button>
+                    </div>
+    
+    
+    
+    
+                    Result of the Air
+                    <br>
+                    <div id="outputbox">
+                        
+                    </div>
+    
+    
+    
+                </form>
+    
+    
+            </div>
+        </div>
+
+
+
+    <script>
+        const btn = document.getElementById('btnSucess');
+        const btn1 = document.getElementById('reset')
+
+        btn.addEventListener('click', function onClick(event) {
+            // 👇️ change background color
+            event.target.style.backgroundColor = 'green';
+            alert("form sucessfull submit")
+
+        });
+        btn1.addEventListener('click', function onClick(event) {
+            event.target.style.backgroundColor = 'Red';
+        });
+
+    </script>
+
+    <p style="text-align:center;background-color:rgb(248, 245, 245);color:black">
+        All &#169; Right Reserved By CSI Group-1
+    </p>
+
+</body>
+
+</html>
