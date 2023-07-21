@@ -4,6 +4,12 @@
 # Notebook Link
 <h2><a href="https://www.kaggle.com/code/atharvamartiwar/celebal-aqi-prediction-group-1"> Notebook Link</a>
 
+Front End layout
+![Screenshot (264)](https://github.com/atharvamartiwar/Celebal-AQI-Prediction/assets/84459753/c3e9324a-3527-496c-90bb-4945ce4ec4cc)
+![Screenshot (265)](https://github.com/atharvamartiwar/Celebal-AQI-Prediction/assets/84459753/47510725-3f60-49e3-9b54-5e2ba9dc2a47)
+
+
+
 # Comparison of the R^2 Score of All models and how they performed with the testing & Training Data
 ![r2plot (1)](https://github.com/atharvamartiwar/Celebal-AQI-Prediction/assets/84459753/bb0d15cd-fcb0-457a-a26c-99b5c626c4d8)
 
@@ -64,3 +70,5 @@
 12) ANN with HPT
 
 ![download](https://github.com/atharvamartiwar/Celebal-AQI-Prediction/assets/84459753/24888bc1-87c5-4841-9f4c-61a7ede3e657)
+
+
